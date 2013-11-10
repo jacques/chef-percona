@@ -4,8 +4,8 @@ module Percona
   module IPScope
     extend self
 
-    PRIVATE_RANGES = [IPAddr.new("10.0.0.0/8"), IPAddr.new("192.168.0.0/16")]
-    LOOPBACK_RANGE = IPAddr.new("0.0.0.0/8")
+    PRIVATE_RANGES = [IPAddr.new("10.0.0.0/8"), IPAddr.new("172.16.0.0/12"), IPAddr.new("192.168.0.0/16")]
+    LOOPBACK_RANGE = IPAddr.new("127.0.0.0/8")
 
     def for(ipaddress)
       addr = IPAddr.new(ipaddress)
