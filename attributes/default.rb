@@ -35,6 +35,11 @@ when "rhel"
   default["percona"]["server"]["default_storage_engine"]        = "innodb"
   default["percona"]["server"]["includedir"]                    = ""
   default["percona"]["server"]["pidfile"]                       = "/var/lib/mysql/mysqld.pid"
+when "smartos"
+  default["percona"]["server"]["socket"]                        = "/tmp/mysql.sock"
+  default["percona"]["server"]["default_storage_engine"]        = "innodb"
+  default["percona"]["server"]["includedir"]                    = ""
+  default["percona"]["server"]["pidfile"]                       = "/var/mysql/mysqld.pid"
 end
 
 # Cookbook Settings
